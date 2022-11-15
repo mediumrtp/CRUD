@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="heading">Registration form</h1>
+
+    <form action="/add_user" method="POST">
+
+        <input type="text" name="empName" placeholder="First name" required>
+
+        <input type="email" name="empEmail" placeholder="Email" required>
+
+        <input type="text" name="empMobile" placeholder="Phone" required>
+
+        <input type="submit" value="Submit">
+    </form>
+    <form action="/delete" method="POST">
+
+        <input type="text" name="id" placeholder="ID" required>
+
+        <button type="submit">Delete</button>
+        <!-- <button type="submit" class="btn">Submit</button> -->
+    </form>
+
+    </br>
+    </br>
+    </br>
+
+    <table>
+        <tr>
+            <th>First name</th>
+            <th>E-mail</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+    </table>
+</body>
+
+</html>
