@@ -5,7 +5,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body onload="httpGet()">>
+<body>
+    <iframe id="view" src="/emp.js"></iframe>
+
     <h1 class="heading">Registration form</h1>
     <form class="form" action="/add_user" method="POST">
         <input type="text" name="empName" placeholder="First name" required>
@@ -19,6 +21,10 @@
         <input type="button" id="btnGetUsers" value="Get Users" />
 
         <script>
+            function myFunction() {
+                document.getElementById("").innerHTML = "Iframe is loaded.";
+            }
+
             function httpGet() {
                 var xmlHttp = new XMLHttpRequest();
                 xmlHttp.open("GET", "http://localhost:8000/view", false); // false for synchronous request

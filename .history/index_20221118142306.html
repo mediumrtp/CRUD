@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body onLoad="start_my_script ()>
+    <h1 class=" heading ">Registration form</h1>
+    <form class="form " action="/add_user " method="POST ">
+        <input type="text " name="empName " placeholder="First name " required>
+        <input type="email " name="empEmail " placeholder="Email " required>
+        <input type="text " name="empMobile " placeholder="Phone " required>
+        <input type="submit " value="Submit ">
+    </form>
+    <form class="delete " action="/delete " method="POST ">
+        <input type="text " name="id " placeholder="ID " required>
+        <input type="submit " value="Delete ">
+        <input type="button " id="btnGetUsers " value="Get Users " /> 
+        <script>
+            function httpGet() {
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open("GET ", "http://localhost:8000/view ", false); // false for synchronous request
+                xmlHttp.send(null);
+                console.log(xmlHttp.responseText);
+                return xmlHttp.responseText;
+            }
+            const myBtn = document.getElementById('btnGetUsers');
+            myBtn.addEventListener('click', (event) => {
+                console.log('clicked');
+                httpGet();
+            });
+        </script>
+    </form>
+
+
+</body>
+
+</html>
